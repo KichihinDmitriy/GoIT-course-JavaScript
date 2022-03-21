@@ -109,3 +109,23 @@ console.log(checkForSpam('Latest technology news'));
 console.log(checkForSpam('JavaScript weekly newsletter'));
 console.log(checkForSpam('Get best sale offers now!'));
 console.log(checkForSpam('[SPAM] How to earn fast money?'));
+
+// task 6
+
+let input;
+const numbers = [];
+let total = 0;
+
+while (input !== null) {
+    input = prompt('Please enter a number:')
+    numbers.push(input)
+}
+
+for (const number of numbers) {
+
+    if (input === null) {
+        total = total + Number(number);
+    }
+}
+
+console.log('Общая сумма чисел равна ' + total);
