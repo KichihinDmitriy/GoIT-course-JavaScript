@@ -24,6 +24,20 @@ for (const key of keys) {
     console.log(`${key}: ${user[key]}`);
 }
 
+// task 2
+
+const countProps = function(obj) {
+    const keys = Object.keys(obj);
+    
+    return keys.length;
+};
+
+console.log(countProps({}));
+  
+console.log(countProps({ name: 'Mango', age: 2 }));
+  
+console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
+
 // task 3
 
 const tasksCompleted = {
@@ -99,6 +113,34 @@ console.log(
     chelsy: 38,
 }));
 
+// task 4
+
+const countTotalSalary = function(employees) {
+    const keys = Object.keys(employees);
+    let totalSalary = 0;
+
+    for (const key of keys) {
+        totalSalary += employees[key];
+    }
+    return totalSalary;
+};
+
+console.log(countTotalSalary({}));
+  
+console.log(
+    countTotalSalary({
+    mango: 100,
+    poly: 150,
+    alfred: 80,
+    }));
+
+console.log(
+    countTotalSalary({
+    kiwi: 200,
+    lux: 50,
+    chelsy: 150,
+    }));
+
 // task 5
 
 const users = [
@@ -124,3 +166,28 @@ console.log(getAllPropValues(users, 'name'));
 console.log(getAllPropValues(users, 'quantity'));
   
 console.log(getAllPropValues(users, 'category'));
+
+// task 6
+
+const products = [
+    { name: 'Радар', price: 1300, quantity: 4 },
+    { name: 'Сканер', price: 2700, quantity: 3 },
+    { name: 'Дроид', price: 400, quantity: 7 },
+    { name: 'Захват', price: 1200, quantity: 2 },
+];
+
+const calculateTotalPrice = function(allProdcuts, productName) {
+    let totalPriceProduct = 0;
+
+    for (const product of products) {
+
+        if (product.name === productName) {
+            totalPriceProduct = product.price * product.quantity
+        }
+    }
+    return totalPriceProduct;
+};
+
+console.log(calculateTotalPrice(products, 'Радар'));
+
+console.log(calculateTotalPrice(products, 'Дроид'));
