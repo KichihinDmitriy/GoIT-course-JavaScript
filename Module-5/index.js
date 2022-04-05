@@ -36,3 +36,82 @@ decrementBtn.addEventListener('click', () => {
     //console.log(counter.value);
     counterValue.textContent = counter.value;
 });
+
+// task 1
+
+const Account = function (login, email) {
+    this.login = login;
+    this.email = email;
+}
+
+Account.prototype.getInfo = function() {
+    console.log(this);
+}
+
+const mango = new Account ('Mangozedog', 'mango@dog.woof');
+mango.getInfo();
+
+const poly = new Account('Poly', 'poly@mail.com');
+poly.getInfo();
+
+// task 2
+
+const User = function ({name, age, followers}) {
+    this.name = name;
+    this.age = age;
+    this.followers = followers;
+}
+
+User.prototype.getInfo = function() {
+    console.log(`User ${this.name} is ${this.age} years old and has ${this.followers} followers`);
+}
+
+const mango = new User({
+    name: 'Mango',
+    age: 2,
+    followers: 20,
+  });
+
+  mango.getInfo();
+
+  const poly = new User({
+    name: 'Poly',
+    age: 3,
+    followers: 17,
+  });
+  
+  poly.getInfo();
+
+// task 3
+
+const Storage = function ([...items]) {
+    this.items = items;
+}
+
+Storage.prototype.getItems = function() {
+    console.table(this.items);
+}
+
+Storage.prototype.addItem = function(addProduct) {
+    this.items.push(addProduct);
+}
+
+Storage.prototype.removeItem = function(removeProduct) {
+    const removeIndex = this.items.indexOf(removeProduct);
+    delete this.items[removeIndex];
+}
+
+const storage = new Storage([
+    'Нанитоиды',
+    'Пролонгер',
+    'Железные жупи',
+    'Антигравитатор',
+  ]);
+
+  storage.getItems();
+
+  storage.addItem('Дроид');
+  console.table(storage.items);
+
+  storage.removeItem('Пролонгер');
+  console.table(storage.items);
