@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // Сounter (constructor function)
 
 const Counter = function (initialValue = 0, step = 1) {
@@ -115,3 +115,23 @@ const storage = new Storage([
 
   storage.removeItem('Пролонгер');
   console.table(storage.items);
+*/
+// task 4
+
+const StringBuilder = function (_value) {
+    this._value = _value;
+    this.value = function() {
+        console.log(this._value);
+    };
+}
+
+StringBuilder.prototype.append = function (str) {
+    console.log(this._value + str);
+}
+
+const builder = new StringBuilder('.');
+
+builder.value();
+
+builder.append('^');
+console.log(builder.value);
