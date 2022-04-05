@@ -115,23 +115,41 @@ const storage = new Storage([
 
   storage.removeItem('Пролонгер');
   console.table(storage.items);
-*/
+
 // task 4
 
-const StringBuilder = function (_value) {
-    this._value = _value;
-    this.value = function() {
-        console.log(this._value);
-    };
-}
+class StringBuilder {
+    constructor(_value) {
+        this._value = _value;
+    }
 
-StringBuilder.prototype.append = function (str) {
-    console.log(this._value + str);
+    get value() {
+        return this._value;
+    }
+
+    append(str) {
+        this._value = this._value + str;
+    }
+
+    prepend(str) {
+        this._value = str + this._value;
+    }
+
+    pad(str) {
+        this._value = str + this._value + str;
+    }
 }
 
 const builder = new StringBuilder('.');
 
-builder.value();
-
 builder.append('^');
 console.log(builder.value);
+
+builder.prepend('^');
+console.log(builder.value);
+
+builder.pad('=');
+console.log(builder.value);
+*/
+// task 5
+
