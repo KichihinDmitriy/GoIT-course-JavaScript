@@ -177,12 +177,26 @@ console.log(getUsersWithFriend(users, 'Goldie Gentry'));
 
 const getNamesSortedByFriendsCount = users => {
     const usersCopy = [...users].sort((prev, next) => {
-        return prev.friends - next.friends;
+        return prev.friends.length - next.friends.length;
     });
     const namesSortedByFriendsCount = usersCopy.map(userCopy => {
         return userCopy.name;
     });
-    return usersCopy;
+    return namesSortedByFriendsCount;
 };
   
 console.log(getNamesSortedByFriendsCount(users));
+
+// task 10
+
+const getSortedUniqueSkills = users => {
+    const reduceSortedUniqueSkills = users.reduce((acc, user) => {
+        acc.push(...user.skills);
+        return acc;
+    }, []);
+    const sortedUniqueSkills = reduceSortedUniqueSkills.sort();
+    const uniqueSkills = [...new Set(sortedUniqueSkills)];
+    return uniqueSkills;
+};
+  
+console.log(getSortedUniqueSkills(users));
