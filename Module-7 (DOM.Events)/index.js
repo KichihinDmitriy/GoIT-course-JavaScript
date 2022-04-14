@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // task 1
 
 const menuItems = document.querySelectorAll('.item');
@@ -14,4 +14,22 @@ const categoriesArray = [...menuItems]
 console.log(categoriesArray);
 
 // task 2
+*/
+const ingredients = [
+    'Картошка',
+    'Грибы',
+    'Чеснок',
+    'Помидоры',
+    'Зелень',
+    'Приправы',
+  ];
 
+  const parentForIngredient = document.querySelector('#ingredients');
+
+  const newListOfIngredients = ingredients.reduce((acc, ingredient) => acc + `<li>${ingredient}</li>`, '');
+
+  parentForIngredient.innerHTML = newListOfIngredients;
+
+  // task 3
+
+  
