@@ -29,7 +29,7 @@ const ingredients = [
   const newListOfIngredients = ingredients.reduce((acc, ingredient) => acc + `<li>${ingredient}</li>`, '');
 
   parentForIngredient.innerHTML = newListOfIngredients;
-*/
+
 // task 3
 
   const images = [
@@ -55,5 +55,27 @@ const ingredients = [
   const galleryMarkup = images.reduce((acc, image) => acc + createGalleryItem(image), '');
 
   galleryMarkupHTML.insertAdjacentHTML('afterbegin', galleryMarkup);
-
+*/
 // task 4
+
+let counterValue = 0;
+
+const decrementBtn = document.querySelector('button[data-action="decrement"]');
+const incrementBtn = document.querySelector('button[data-action="increment"]');
+const value = document.querySelector('#value');
+
+const decrement = () => {
+    counterValue -= 1;
+    value.textContent = counterValue;
+};
+
+const increment = () => {
+    counterValue += 1;
+    value.textContent = counterValue;
+};
+
+decrementBtn.addEventListener('click', decrement);
+incrementBtn.addEventListener('click', increment);
+
+// task 5
+
