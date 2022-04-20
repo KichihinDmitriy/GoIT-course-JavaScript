@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 // task 1
 
 const menuItems = document.querySelectorAll('.item');
@@ -55,7 +55,7 @@ const ingredients = [
   const galleryMarkup = images.reduce((acc, image) => acc + createGalleryItem(image), '');
 
   galleryMarkupHTML.insertAdjacentHTML('afterbegin', galleryMarkup);
-*/
+
 // task 4
 
 let counterValue = 0;
@@ -79,3 +79,28 @@ incrementBtn.addEventListener('click', increment);
 
 // task 5
 
+const nameInput = document.querySelector('#name-input');
+const nameOutput = document.querySelector('#name-output');
+
+const nameInputFn = (event) => {
+    nameOutput.textContent = event.currentTarget.value;
+};
+
+nameInput.addEventListener('input', nameInputFn);
+
+// task 6
+
+const validationInput = document.querySelector('#validation-input');
+
+const attributeDataLength = Number(validationInput.getAttribute('data-length'));
+
+const validationInputFn = (event) => {
+    if (event.currentTarget.value.length !== attributeDataLength) {
+        validationInput.classList.add('invalid');
+    } else {
+        validationInput.classList.remove('invalid');
+        validationInput.classList.add('valid');
+    }
+};
+
+validationInput.addEventListener('input', validationInputFn);
