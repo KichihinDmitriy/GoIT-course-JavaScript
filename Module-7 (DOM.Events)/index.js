@@ -104,3 +104,14 @@ const validationInputFn = (event) => {
 };
 
 validationInput.addEventListener('input', validationInputFn);
+
+// task 7
+
+const inputFontSizeControlRange = document.querySelector('#font-size-control');
+const textFontSizeControl = document.querySelector('#text');
+
+const inputFontSizeControlFn = () => {
+    textFontSizeControl.style.fontSize = `${inputFontSizeControlRange.value}px`;
+};
+
+inputFontSizeControlRange.addEventListener('input', inputFontSizeControlFn);
