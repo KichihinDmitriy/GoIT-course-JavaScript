@@ -107,3 +107,14 @@ const closeModalWindowFn = () => {
 
 closeModalWindowBtn.addEventListener('click', closeModalWindowFn);
 closeModalWindowBody.addEventListener('click', closeModalWindowFn);
+
+const closeModalWindowFnEsc = (e) => {
+    if (e.key === 'Escape') {
+        closeModalWindowFn();
+    };
+};
+
+window.addEventListener('keydown', closeModalWindowFnEsc);
+
+const scrolFn = () => console.log('scrol');
+window.addEventListener('scroll', _.throttle(scrolFn, 300));
