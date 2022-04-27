@@ -4,8 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "babel src -d lib"
   },
   "author": "Dmitriy Kichihin <kichihin.dmitriy1@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "uuid": "^8.3.2"
+  }
 }
