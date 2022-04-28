@@ -17,3 +17,10 @@ class Car {
 }
 
 const mazda = new Car(10000);
+
+const messageModule = require('./message');
+console.log(messageModule);
+console.log(messageModule.getMessage());
+
+import exportMessage from './message.js';
+console.log(exportMessage());

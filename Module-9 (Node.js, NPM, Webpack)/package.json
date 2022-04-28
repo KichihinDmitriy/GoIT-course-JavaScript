@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "build": "babel src -d lib"
   },
   "author": "Dmitriy Kichihin <kichihin.dmitriy1@gmail.com>",
@@ -15,7 +15,6 @@
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "uuid": "^8.3.2"
+    "@babel/preset-env": "^7.16.11"
   }
 }
