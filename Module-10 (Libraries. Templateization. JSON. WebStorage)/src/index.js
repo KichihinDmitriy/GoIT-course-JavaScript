@@ -12,3 +12,23 @@ function buildItemSample (items) {
 }
 
 buildItemSample(items);
+
+const bodyTheme = document.querySelector('body');
+
+const themeSwitch = document.querySelector('#theme-switch-toggle');
+
+const themeSwitchToggle = (checked) => {
+    localStorage.setItem('checkboxValue', checked);
+    if (checked) {
+        bodyTheme.classList.remove('light-theme');
+        bodyTheme.classList.add('dark-theme');
+    } else {
+        bodyTheme.classList.remove('dark-theme');
+        bodyTheme.classList.add('light-theme');
+    }
+};
+
+const localStorageCheckboxValue = Boolean(localStorage.getItem('checkboxValue'));
+bodyTheme.classList.add(localStorageCheckboxValue ? 'dark-theme' : 'light-theme');
+themeSwitch.checked = localStorageCheckboxValue;
+themeSwitch.addEventListener('change', () => themeSwitchToggle(themeSwitch.checked));
