@@ -14,7 +14,6 @@ function buildItemSample (items) {
 buildItemSample(items);
 
 const bodyTheme = document.querySelector('body');
-
 const themeSwitch = document.querySelector('#theme-switch-toggle');
 
 const themeSwitchToggle = (checked) => {
@@ -28,7 +27,4 @@ const themeSwitchToggle = (checked) => {
     }
 };
 
-const localStorageCheckboxValue = Boolean(localStorage.getItem('checkboxValue'));
-bodyTheme.classList.add(localStorageCheckboxValue ? 'dark-theme' : 'light-theme');
-themeSwitch.checked = localStorageCheckboxValue;
 themeSwitch.addEventListener('change', () => themeSwitchToggle(themeSwitch.checked));
