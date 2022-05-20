@@ -35,3 +35,35 @@
 .button-container button:last-child:hover {
     background-color: #f44336;
 }
+
+.timer {
+    margin-top: 100px;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #49d450;
+    font-size: 44px;
+}
+
+.field {
+    padding: 10px 10px 5px 10px;
+    margin: 1px;
+    border-radius: 4px;
+    background: #000000;
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+}
+
+.value {
+    border-radius: 4px;
+    background: #727272;
+    display: inline-block;
+    width: 80px;
+}
+
+.label {
+    display: block;
+    font-size: 16px;
+    color: #727272;
+}
