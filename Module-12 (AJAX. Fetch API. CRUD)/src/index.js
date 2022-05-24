@@ -9,21 +9,17 @@ const debouceFn = function (e) {
     const name = e.target.value;
 
     const logSuccess = (data) => {
-        console.log(data);
 
         const listCountries = document.querySelector('.js-countries');
 
-        function buildListCountries (items) {
+        function buildListCountries(items) {
             const markup = items.map(item => itemSample(item)).join('');
-
-            console.log(markup);
-        
             listCountries.insertAdjacentHTML('beforeend', markup);
         }
 
         buildListCountries(data);
     };
-    
+
     const logError = err => {
         console.warn(err);
     };
