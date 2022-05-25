@@ -1,6 +1,3 @@
-.text-field {
-}
-
 .text-input {
     display: block;
     width: 50%;
@@ -16,4 +13,16 @@
     border: 1px solid #bdbdbd;
     border-radius: 0.5rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.country-general {
+    list-style-type: none;
+}
+
+.country-name {
+    color: #1119a6;
+}
+
+.country-flag {
+    margin-top: 20px;
 }
