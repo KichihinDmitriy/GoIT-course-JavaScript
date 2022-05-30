@@ -1,3 +1,4 @@
+import Masonry from 'masonry-layout';
 import './sass/index.scss';
 
 
@@ -22,26 +23,7 @@ function searchFormSubmit (event) {
         const items = data.hits;
         const markup = items.reduce((markup, item) => markup +
         `<div class="photo-card">
-        <img src="${item.webformatURL}" alt="${search}" />
-      
-        <div class="stats">
-          <p class="stats-item">
-            <i class="material-icons">thumb_up</i>
-            ${item.likes}
-          </p>
-          <p class="stats-item">
-            <i class="material-icons">visibility</i>
-            ${item.views}
-          </p>
-          <p class="stats-item">
-            <i class="material-icons">comment</i>
-            ${item.comments}
-          </p>
-          <p class="stats-item">
-            <i class="material-icons">cloud_download</i>
-            ${item.downloads}
-          </p>
-        </div>
+          <img src="${item.webformatURL}" alt="${search}" />
         </div>`
         , '');
         gallery.innerHTML = markup;

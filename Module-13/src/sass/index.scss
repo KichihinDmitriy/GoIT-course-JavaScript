@@ -2,23 +2,39 @@ body {
     margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
 .search-form {
     height: 200px;
     text-align: center;
     background-image: linear-gradient(to right,#8e9eab, #eef2f3);
+    font-family: 'Kalam', cursive;
 }
 
 .input-search {
     width: 40%;
-    margin-top: 100px;
-    height: 30px;
+    margin-top: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #8e9eab;
+    font-family: 'Kalam', cursive;
 }
 
 .button-submit {
-    cursor: pointer;
     background-color: #8e9eab;
-    margin-top: 100px;
-    height: 30px;
+    border: none;
+    color: #fff;
+    padding: 12px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #eef2f3;
+    font-family: 'Kalam', cursive;
 }
 
 .spiner {
@@ -38,7 +54,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    color: #585858;
+    color: #8e9eab;
     font-size: 20px;
     width: 1em;
     height: 1em;
@@ -105,3 +121,18 @@ body {
       box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
     }
   }
+
+.gallery {
+  background-color: #000;
+}
+
+.photo-card {
+  display: inline-block;
+  width: 32.9%;
+  margin: 0.2%;
+}
+
+.photo-card img {
+  width: 100%;
+  vertical-align: middle;
+}
